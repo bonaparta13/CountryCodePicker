@@ -198,9 +198,8 @@ class CountryCodePickerState extends State<CountryCodePicker> {
                 Flexible(
                   fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,
                   child: Text(
-                    widget.showOnlyCountryWhenClosed
-                        ? selectedItem!.toCountryStringOnly()
-                        : selectedItem.toString(),
+                      selectedItem!.toCountryStringOnly() +
+                        " (${selectedItem.toString()}) ",
                     style: widget.textStyle ??
                         Theme.of(context).textTheme.labelLarge,
                     overflow: widget.textOverflow,
